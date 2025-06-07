@@ -1,6 +1,6 @@
-import React from "react";
 import "./RightSidebar.css";
 import assets from "../../assets/assets";
+import { logoutUser } from "../../config/supabase";
 const RightSidebar = () => {
   return (
     <div className="rs">
@@ -23,7 +23,7 @@ const RightSidebar = () => {
           <img src={assets.pic2} alt="" />
         </div>
       </div>
-      <button>Logout</button>
+      <button onClick={() => logoutUser()}>Logout</button>
     </div>
   );
 };
