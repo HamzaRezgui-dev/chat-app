@@ -19,10 +19,8 @@ const Login = () => {
     try {
       if (currState === "Sign up") {
         await signUpUser(email, password, username);
-        alert("Sign-up successful! Check your inbox for confirmation.");
       } else if (currState === "Login") {
         await loginUser(email, password);
-        alert("you have successfully logged in");
         navigate("/chat");
       } else {
         // TODO: loginUser logic
