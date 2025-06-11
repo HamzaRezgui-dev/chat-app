@@ -21,16 +21,10 @@ const App = () => {
       if (session) {
         const {
           data: { user },
-          error,
         } = await supabase.auth.getUser();
 
         if (user) {
           await loadUserData(user);
-        }
-        if (error) {
-          console.error("Failed to fetch user:", error.message);
-        } else {
-          console.log("Current user:", user);
         }
       }
     };

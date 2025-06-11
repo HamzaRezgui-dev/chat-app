@@ -79,14 +79,14 @@ export async function updateUserProfile({
     const filePath = `${userId}.${fileExt}`;
 
     const { error: uploadError } = await supabase.storage
-      .from("avatars")
+      .from("chat-app")
       .upload(filePath, avatarFile, { upsert: true });
 
     if (uploadError) throw uploadError;
 
     const {
       data: { publicUrl },
-    } = supabase.storage.from("avatars").getPublicUrl(filePath);
+    } = supabase.storage.from("chat-app").getPublicUrl(filePath);
 
     avatarUrl = publicUrl;
   }

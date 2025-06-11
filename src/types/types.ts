@@ -1,5 +1,3 @@
-// src/types.ts
-
 import type { User } from "@supabase/supabase-js";
 
 export type Profile = {
@@ -14,7 +12,7 @@ export type Profile = {
 
 export type Chat = {
   user_id: string;
-  chat_data: any[]; // You can define a stricter type for messages if needed
+  chat_data: any[];
 };
 
 export type AppContextType = {

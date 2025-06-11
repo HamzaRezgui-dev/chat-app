@@ -23,7 +23,6 @@ const Login = () => {
         await loginUser(email, password);
         navigate("/chat");
       } else {
-        // TODO: loginUser logic
         alert("Login functionality not implemented yet.");
       }
     } catch {
